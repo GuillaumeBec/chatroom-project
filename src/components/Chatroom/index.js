@@ -5,11 +5,11 @@ import Logger from 'src/components/Logger';
 import Messages from 'src/components/Messages';
 import WriteMessage from 'src/components/WriteMessage';
 // == Import
+import './style.scss';
 
 // == Composant
 const Chatroom = () => (
-  <div className="Chatroom">
-    <h1>Composant : Chatroom</h1>
+  <div className="chatroom">
     <Logger />
     <Infos />
     <Messages />

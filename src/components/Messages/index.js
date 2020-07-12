@@ -5,7 +5,7 @@ import Message from './Message';
 import './style.scss';
 
 const Messages = () => (
-  <div>
+  <div className="messages">
     <Message />
     <Message />
     <Message />

@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 const Infos = () => (
-  <div>Infos</div>
+  <div className="infos">
+    <span> Jacques, Jeannot et Pierrot sont en ligne</span>
+  </div>
 );
 
 export default Infos;

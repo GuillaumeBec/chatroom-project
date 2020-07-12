@@ -1,0 +1,38 @@
+@use '../../styles/_vars.scss';
+
+.logger {
+    left: 0;
+    margin-left: 3px;
+    position: fixed;
+    top: 25vh;
+    display: flex;
+    width: 300px;
+    &__form {
+    display: flex;
+    flex-direction: column;
+    };
+    &__input {
+      border-radius: 4px;
+      padding-left: 3px;
+      margin: 1.5px;
+      border: none;
+    };
+    &__submit{
+      background-color: vars.$color-alt;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      margin: 3px;
+    }
+    &__toggler {
+      transform: rotate(45deg);
+      color: white;
+      font-weight: 700;
+      background-color: vars.$color-alt;
+      border: none;
+      font-size: 2rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 3rem;
+    }
+};
