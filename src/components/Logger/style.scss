@@ -7,9 +7,18 @@
     top: 25vh;
     display: flex;
     width: 300px;
+    transition: transform .3s;
+    transform: translateX(-190px);
+    &--open {
+    transform: translateX(0);
+        .logger__toggler {
+          transform: rotate(45deg);
+        }
+    }
     &__form {
     display: flex;
     flex-direction: column;
+    
     };
     &__input {
       border-radius: 4px;
@@ -25,7 +34,7 @@
       margin: 3px;
     }
     &__toggler {
-      transform: rotate(45deg);
+      margin-left: 0.7rem;
       color: white;
       font-weight: 700;
       background-color: vars.$color-alt;
@@ -35,4 +44,8 @@
       height: 40px;
       border-radius: 3rem;
     }
+    &__toggler:hover {
+    transform:scale(1.2);
+    transition: transform .45s;
+      }
 };

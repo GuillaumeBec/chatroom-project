@@ -1,7 +1,7 @@
 // == Import npm
 import React from 'react';
 import Infos from 'src/components/Infos';
-import Logger from 'src/components/Logger';
+import Logger from 'src/containers/Logger';
 import Messages from 'src/components/Messages';
 import WriteMessage from 'src/components/WriteMessage';
 // == Import
