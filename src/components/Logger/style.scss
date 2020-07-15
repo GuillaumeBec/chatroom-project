@@ -46,6 +46,7 @@
     }
     &__toggler:hover {
     transform:scale(1.2);
+    //transform: rotate(45deg);
     transition: transform .45s;
       }
 };

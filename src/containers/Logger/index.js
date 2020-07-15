@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { toggle } from 'src/actions';
+import { toggle, change } from 'src/actions';
 import Logger from 'src/components/Logger';
 
 const mapStateToProps = (state) => ({
