@@ -3,20 +3,26 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const WriteMessage = ({ messageValue, changeMessageValue }) => {
+const WriteMessage = ({ messageValue,
+  changeMessageValue,
+  addMessage,
+}) => {
   const handleOnChange = (event) => {
-    //console.log(messageValue);
+    // console.log(messageValue);
     changeMessageValue(event.target.value);
   };
 
   const handleOnSubmit = (event) => {
-    console.log('je veux envoyer le message', messageValue);
+    // console.log('je veux envoyer le message', messageValue);
     event.preventDefault();
+    addMessage();
+    document.querySelector('#messageForm').reset();
   };
 
   return (
     <div className="writeMessage">
       <form
+        id="messageForm"
         action=""
         onSubmit={handleOnSubmit}
       >
@@ -38,6 +44,7 @@ const WriteMessage = ({ messageValue, changeMessageValue }) => {
 WriteMessage.propTypes = {
   messageValue: PropTypes.string.isRequired,
   changeMessageValue: PropTypes.func.isRequired,
+  addMessage: PropTypes.func.isRequired,
 };
 
 export default WriteMessage;

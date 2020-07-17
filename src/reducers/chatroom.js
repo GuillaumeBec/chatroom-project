@@ -2,11 +2,13 @@ import {
   TOGGLE,
   CHANGE,
   CHANGE_MESSAGE_VALUE,
+  ADD_MESSAGE,
 } from 'src/actions';
 
 const initialState = {
   open: false,
   messageValue: '',
+  author: 'Mr Flantier',
   messages: [
     {
       author: 'Serge',
@@ -42,6 +44,21 @@ const chatroom = (state = initialState, action = {}) => {
         ...state,
         messageValue: action.messageValue,
       };
+    case ADD_MESSAGE: {
+      const newMessages = [...state.messages];
+      const newMessage = {
+        author: state.author,
+        content: state.messageValue,
+        date: '17/07 - 23h48',
+        id: 2,
+      };
+      newMessages.push(newMessage);
+      return {
+        ...state,
+        messageValue: '',
+        messages: newMessages,
+      };
+    }
     default:
       return state;
   }
