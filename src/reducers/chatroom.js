@@ -1,9 +1,12 @@
-import { TOGGLE,
+import {
+  TOGGLE,
   CHANGE,
+  CHANGE_MESSAGE_VALUE,
 } from 'src/actions';
 
 const initialState = {
   open: false,
+  messageValue: '',
 };
 
 const chatroom = (state = initialState, action = {}) => {
@@ -18,6 +21,12 @@ const chatroom = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.key]: action.value,
+      };
+    case CHANGE_MESSAGE_VALUE:
+      // console.log('je passe dans le reducer', action),
+      return {
+        ...state,
+        messageValue: action.messageValue,
       };
     default:
       return state;

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { toggle, change } from 'src/actions';
+import { toggle } from 'src/actions';
 import Logger from 'src/components/Logger';
 
 const mapStateToProps = (state) => ({
@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   handleToggle: () => {
-    console.log('Je veux changer le toggle');
+    // console.log('Je veux changer le toggle');
     dispatch(toggle());
   },
 });
