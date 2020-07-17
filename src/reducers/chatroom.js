@@ -7,7 +7,20 @@ import {
 const initialState = {
   open: false,
   messageValue: '',
-  messages: [],
+  messages: [
+    {
+      author: 'Serge',
+      content: 'Salut Pierrot !',
+      date: '14/07 - 12h23',
+      id: 1,
+    },
+    {
+      author: 'Pierrot',
+      content: 'Mais c\'est ce bon vieux Serge !',
+      date: '14/07 - 13h58',
+      id: 2,
+    },
+  ],
 };
 
 const chatroom = (state = initialState, action = {}) => {

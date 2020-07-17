@@ -4,13 +4,25 @@ import Message from './Message';
 
 import './style.scss';
 
-const Messages = () => (
+const Messages = ({ messages }) => (
   <div className="messages">
-    <Message />
-    <Message />
-    <Message />
-    <Message />
+    {messages.map((message) => (
+      <Message
+        key={message.id}
+        {...message}
+      />
+    ))}
   </div>
 );
+
+Messages.propTypes = {
+  messages: PropTypes.arrayOf(
+    PropTypes.shape({
+      author: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
+};
 
 export default Messages;

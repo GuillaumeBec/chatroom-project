@@ -3,16 +3,22 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const Message = () => (
+const Message = ({ author, content, date }) => (
 
   <div className="message">
     <span className="message__infos">
-      Auteur - 17h15
+      {author} - {date}
     </span>
     <div className="message__content">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      { content }
     </div>
   </div>
 );
+
+Message.propTypes = {
+  author: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+};
 
 export default Message;

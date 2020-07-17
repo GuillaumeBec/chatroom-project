@@ -32,7 +32,7 @@ const WriteMessage = ({ messageValue, changeMessageValue }) => {
         <button className="writeMessage__button" type="submit"> Envoyer</button>
       </form>
     </div>
-  )
+  );
 };
 
 WriteMessage.propTypes = {
