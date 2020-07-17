@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 const Field = ({
-  id, value, label, setValue, type,
+  id,
+  value,
+  label,
+  setValue,
+  type,
 }) => {
   const handleOnChange = (event) => {
     setValue(event.target.value);

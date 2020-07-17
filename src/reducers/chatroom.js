@@ -46,10 +46,12 @@ const chatroom = (state = initialState, action = {}) => {
       };
     case ADD_MESSAGE: {
       const newMessages = [...state.messages];
+      const today = new Date();
+      const newMessageDate = `${today.getMonth() + 1}-${today.getDate()} / ${today.getHours()}:${today.getMinutes()}`;
       const newMessage = {
         author: state.author,
         content: state.messageValue,
-        date: '17/07 - 23h48',
+        date: newMessageDate,
         id: 2,
       };
       newMessages.push(newMessage);
