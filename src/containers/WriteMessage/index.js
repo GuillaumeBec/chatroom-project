@@ -9,10 +9,9 @@ const mapStateToProps = (state) => ({
   messageValue: state.messageValue,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  
+const mapDispatchToProps = (dispatch) => ({  
   changeMessageValue: (messageValue) => {
-    console.log('je veux changer la valeur du state par', messageValue);
+    // console.log('je veux changer la valeur du state par', messageValue);
     dispatch(changeMessageValue(messageValue));
   },
 });

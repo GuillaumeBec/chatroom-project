@@ -7,6 +7,7 @@ import {
 const initialState = {
   open: false,
   messageValue: '',
+  messages: [],
 };
 
 const chatroom = (state = initialState, action = {}) => {

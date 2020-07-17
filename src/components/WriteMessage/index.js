@@ -5,13 +5,21 @@ import './style.scss';
 
 const WriteMessage = ({ messageValue, changeMessageValue }) => {
   const handleOnChange = (event) => {
-    console.log(messageValue);
+    //console.log(messageValue);
     changeMessageValue(event.target.value);
+  };
+
+  const handleOnSubmit = (event) => {
+    console.log('je veux envoyer le message', messageValue);
+    event.preventDefault();
   };
 
   return (
     <div className="writeMessage">
-      <form action="">
+      <form
+        action=""
+        onSubmit={handleOnSubmit}
+      >
         <input
           className="writeMessage__input"
           type="text"
