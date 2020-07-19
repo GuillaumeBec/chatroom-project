@@ -4,12 +4,13 @@ import Message from './Message';
 
 import './style.scss';
 
-const Messages = ({ messages }) => (
+const Messages = ({ messages, stateAuthor }) => (
   <div className="messages">
     {messages.map((message) => (
       <Message
         key={message.id}
         {...message}
+        stateAuthor={stateAuthor}
       />
     ))}
   </div>
@@ -23,6 +24,7 @@ Messages.propTypes = {
       id: PropTypes.number.isRequired,
     }),
   ).isRequired,
+  stateAuthor: PropTypes.string.isRequired,
 };
 
 export default Messages;
